@@ -13,7 +13,7 @@ export default function product({product}) {
     </Link>
     <div className='mt-4'>
       <h3 className='text-xl font-bold'>{product.model}</h3>
-      <p className='text-gray-900 font-semibold mt-2'>{product.title}</p>
+      <p className='text-gray-900 font-semibold mt-2'>{product.title.substring(0 , 30)}</p>
       <button className={`${styles.btn} mt-2 px-4 py-2 bg-pink-500 text-white rounded-lg`}>
         Buy Now
       </button>
