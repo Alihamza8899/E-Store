@@ -3,7 +3,7 @@ import Container from './container.jsx'
 import Product from '../product.jsx'
 
 export default async function featuredProduct() {
-   let response = await fetch("https://fakestoreapi.in/api/products?limit=5");
+   let response = await fetch("https://dummyjson.com/products?limit=5");
    let data = await response.json();
    console.log(data.products)
   return (

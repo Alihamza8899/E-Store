@@ -6,7 +6,7 @@ import Product from '../product.jsx'
 export default function RecentlyAddProduct() {
  let [products , setProduct ] = useState([])
   let getProduct = async () => {
-    let response = await fetch("https://fakestoreapi.in/api/products?limit=5");
+    let response = await fetch("https://dummyjson.com/products?limit=5");
     let data = await response.json();
     setProduct(data.products);
     console.log(products);

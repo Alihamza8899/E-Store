@@ -5,7 +5,7 @@ import Container from '@/component/home/container.jsx'
 
 export default function Hero() {
   return (
-    <Container>
+    <Container className={styles.contain}>
         <section className={`${styles.hero}`}>
             <div className={`${styles.textSection}`}>
               <h1 className={`text-gray-700`}>One stop solution <span className='text-pink-500'>E-Store</span></h1>
