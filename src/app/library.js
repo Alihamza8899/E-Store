@@ -1,19 +1,19 @@
 let getCatagery = async () => {
-  const response = await fetch('https://fakestoreapi.in/api/products/category');
+  const response = await fetch('https://dummyjson.com/products?limit=10');
   if (!response.ok) {
     // Avoid JSON.parse on bad response
-    throw new Error(`Failed to fetch products: ${res.statusText}`);
+    throw new Error(`Failed to fetch products: ${response.statusText}`);
   }
   else {
     const data = await response.json();
-    return data.categories;
+    return data;
   }
 }
 let getProducts = async () => {
-  const response = await fetch('https://fakestoreapi.in/api/products');
+  const response = await fetch('https://dummyjson.com/products');
   if (!response.ok) {
     // Avoid JSON.parse on bad response
-    throw new Error(`Failed to fetch products: ${res.statusText}`);
+    throw new Error(`Failed to fetch products: ${response.statusText}`);
   }
   else {
     const data = await response.json();
@@ -21,7 +21,7 @@ let getProducts = async () => {
   }
 }
 let getProductDetail = async (product_id = null) => {
-  const response = await fetch('https://fakestoreapi.in/api/products/' + product_id);
+  const response = await fetch('https://dummyjson.com/products/' + product_id);
   if (!response.ok) {
     // Avoid JSON.parse on bad response
     throw new Error(`Failed to fetch products: ${response.statusText}`);

@@ -14,13 +14,14 @@ export default function Store() {
 
 let CatageryList = async () => {
    const data = await getCatagery();
+    console.log(data);
    
   return <div>
       <div className='text-2xl text-center'>Category</div>
       <ul>
         {
-          data.map((c_name , i) => {
-            return <li  className='p-2 border mt-3' key={'category' + i}>{c_name.toUpperCase()}</li>
+          data.products.map((c_name , i) => {
+            return <li  className='p-2 border mt-3' key={'category' + i}>{c_name.category.toUpperCase()}</li>
           })
         }
       </ul>
@@ -28,7 +29,7 @@ let CatageryList = async () => {
 }
 let ProductList = async () => {
   const data = await getProducts();
-  console.log(data);
+  
   return <div className='col-span-4 grid grid-cols-3 gap-3 mt-3'> 
        {
         data.map((p , i) => {
